@@ -31,7 +31,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 async function withAsync() {
   try {
     // create a new db
-    const db = new RNAsyncStorageLevel(AsyncStorage, 'my-db-1')
+    const db = LevelFactory.createAbstractLevel(RNAsyncStorageLevel, 'my-db-1')
+
+    if (db instanceof RNAsyncStorageLevel) {
+      db.setStorage(AsyncStorage)
+    }
 
     // listen for 'put' events
     db.on('put', (key, value) => {
@@ -82,12 +86,16 @@ async function withAsync() {
 ## 🌝 With callbacks (prefer promises)
 
 ```
-import { RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
+import { LevelFactory, RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 async function withCallbacks() {
   // create a new db
-  const db = new RNAsyncStorageLevel(AsyncStorage, 'my-db-1')
+  const db = LevelFactory.createAbstractLevel(RNAsyncStorageLevel, 'my-db-1')
+
+  if (db instanceof RNAsyncStorageLevel) {
+    db.setStorage(AsyncStorage)
+  }
 
   // listen for 'put' events
   db.on('put', (key, value) => {
