@@ -1960,6 +1960,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hyphen-id/rn-async-storage-level@file:./rn-async-storage-level::locator=expo-demo%40workspace%3A.":
+  version: 1.0.20
+  resolution: "@hyphen-id/rn-async-storage-level@file:./rn-async-storage-level#./rn-async-storage-level::hash=28e1c8&locator=expo-demo%40workspace%3A."
+  checksum: 28ccf66643855099a49376a41109677bb1de7c9af4ff5182aa6d40e76adc50798aa907a754805c75126e1755925bdae41188cca4b4439a95b2cb01401449e00b
+  languageName: node
+  linkType: hard
+
 "@jest/create-cache-key-function@npm:^29.2.1":
   version: 29.5.0
   resolution: "@jest/create-cache-key-function@npm:29.5.0"
@@ -2167,13 +2174,6 @@ __metadata:
     mkdirp: ^1.0.4
     rimraf: ^3.0.2
   checksum: 52dc02259d98da517fae4cb3a0a3850227bdae4939dda1980b788a7670636ca2b4a01b58df03dd5f65c1e3cb70c50fa8ce5762b582b3f499ec30ee5ce1fd9380
-  languageName: node
-  linkType: hard
-
-"@pax-k/rn-async-storage-level@file:./rn-async-storage-level::locator=expo-demo%40workspace%3A.":
-  version: 1.0.19
-  resolution: "@pax-k/rn-async-storage-level@file:./rn-async-storage-level#./rn-async-storage-level::hash=152f5d&locator=expo-demo%40workspace%3A."
-  checksum: bc7a260cc1bae4ea305f36a3186faeb16ccb217ff6eeebf11bb7f8167ecdcc23b651198669097019b193905c9e4b021e94ef4cfb0ad5102572c6b8808c24dafa
   languageName: node
   linkType: hard
 
@@ -4311,7 +4311,7 @@ __metadata:
   resolution: "expo-demo@workspace:."
   dependencies:
     "@babel/core": ^7.20.0
-    "@pax-k/rn-async-storage-level": "file:./rn-async-storage-level"
+    "@hyphen-id/rn-async-storage-level": "file:./rn-async-storage-level"
     "@react-native-async-storage/async-storage": 1.18.1
     "@types/react": ~18.0.14
     expo: ~48.0.15

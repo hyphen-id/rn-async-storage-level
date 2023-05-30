@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View } from 'react-native'
-import { LevelFactory, RNAsyncStorageLevel } from '@pax-k/rn-async-storage-level'
+import { LevelFactory, RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 async function withAsync() {

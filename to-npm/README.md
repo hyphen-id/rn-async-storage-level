@@ -17,15 +17,15 @@ yarn expo run:android
 # 💿 Installation
 
 ```
-yarn add @pax-k/rn-async-storage-level
+yarn add @hyphen-id/rn-async-storage-level
 ```
-
 
 # 🏋️ Usage
 
 ## ✅ With promises (prefered way)
+
 ```
-import { RNAsyncStorageLevel } from '@pax-k/rn-async-storage-level'
+import { RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 async function withAsync() {
@@ -78,9 +78,11 @@ async function withAsync() {
 }
 
 ```
+
 ## 🌝 With callbacks (prefer promises)
+
 ```
-import { RNAsyncStorageLevel } from '@pax-k/rn-async-storage-level'
+import { RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 async function withCallbacks() {
@@ -159,30 +161,43 @@ async function withCallbacks() {
 ```
 
 # 🙋‍♂️ FAQ
+
 ## 👉🏻 Why build this
+
 There was no modern and actively maintained `abstract-level` compatible storage for React Native.
+
 ## 👉🏻 Why this works
+
 `abstract-level` uses NodeJS native functions which won't work in a browser (or in the Hermes JS engine for React Native). At build time, `parcel` [pollyfills](https://parceljs.org/features/node-emulation#polyfilling-%26-excluding-builtin-node-modules) some of the native functions, but misses `text-encoding`. This is injected by [`build.sh`](build.sh), then `browserify` bundles everything together into a 100% browser compatible module.
 
 Apart from bundling, it is important to have `AsyncStorage` module installed in the consumer app, for it to referece the correct bindings. This is why it needs to be refereced from the app:
+
 ```
 const db = new RNAsyncStorageLevel(AsyncStorage, 'my-db-1')
 ```
+
 # 🚧 Limitations
+
 - [Known storage limits](https://react-native-async-storage.github.io/async-storage/docs/limits)
 - a value's type is limited to `string | number | boolean | null | undefined`
 - no support for `snapshots, keyIterator, valueIterator, iteratorNextv, streams, seek, batch`
 - without support for snapshots, isolation of transactions is instead guaranteed by using await/promises (as they are sequential), as opposed to callbacks that use `queueMicrotask`
+
 # 👷 TODO
+
 - support for `keyIterator, valueIterator, iteratorNextv, batch` operations
 - support for `Uint8Array` as value type (for storing files as blobs)
 - caching + invalidation
 - add tests
+
 # 🌈 Shouts 👏🏻
+
 To [Hyphen](https://hyphen.id/) for sponsoring this effort and to [TBD](https://www.tbd.website/) for powering the next wave of private & decentralised apps.
 
 # 👋 Contribute
+
 ## Running the project locally
+
 ```
 git clone https://github.com/pax-k/rn-async-storage-level && cd rn-async-storage-level
 yarn
