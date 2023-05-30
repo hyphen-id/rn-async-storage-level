@@ -25,7 +25,7 @@ yarn add @hyphen-id/rn-async-storage-level
 ## ✅ With promises (prefered way)
 
 ```
-import { RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
+import { LevelFactory, RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 async function withAsync() {
