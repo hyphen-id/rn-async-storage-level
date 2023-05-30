@@ -1,7 +1,7 @@
 {
   "name": "@hyphen-id/rn-async-storage-level",
   "description": "An abstract-level implementation of AsyncStorage for React Native using TypeScript.",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "source": "src/index.ts",
   "browser": "dist/main.js",
   "types": "dist/types.d.ts",
