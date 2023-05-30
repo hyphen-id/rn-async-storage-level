@@ -196,8 +196,14 @@ const db = new RNAsyncStorageLevel(AsyncStorage, 'my-db-1')
 # 👷 TODO
 
 - support for `keyIterator, valueIterator, iteratorNextv, batch` operations
-- support for `Uint8Array` as value type (for storing files as blobs)
-- caching + invalidation
+- Remove buffer from bundle, use react-native-buffer instead
+- Fix encodings: use view, json, buffer
+- Fix Accepted value types
+- Fix iterator: don't return a new instance every time, use * generators
+- Implement other errors
+- Find a way to implement snapshots / locks
+- Implement simple caching
+- Pass options for all _methods
 - add tests
 
 # 🌈 Shouts 👏🏻
