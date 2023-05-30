@@ -4,6 +4,8 @@ This is an [`abstract-level`](https://github.com/Level/abstract-level) implement
 
 It was tested with Expo SDK 48 for iOS & Android.
 
+Powered by [Hyphen](https://hyphen.id/).
+
 # 🔥 Prerequisites
 
 `AsyncStorage` has to be installed, and development builds have to be created:
@@ -25,7 +27,7 @@ yarn add @hyphen-id/rn-async-storage-level
 ## ✅ With promises (prefered way)
 
 ```
-import { RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
+import { LevelFactory, RNAsyncStorageLevel } from '@hyphen-id/rn-async-storage-level'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 async function withAsync() {
@@ -200,7 +202,7 @@ const db = new RNAsyncStorageLevel(AsyncStorage, 'my-db-1')
 
 # 🌈 Shouts 👏🏻
 
-To [Hyphen](https://hyphen.id/) for sponsoring this effort and to [TBD](https://www.tbd.website/) for powering the next wave of private & decentralised apps.
+To [TBD](https://www.tbd.website/) for powering the next wave of private & decentralised apps.
 
 # 👋 Contribute
 
